@@ -50,7 +50,7 @@ function Index() {
             href="#contact"
             className="text-xs uppercase tracking-[0.2em] gold-gradient text-ink px-4 py-2 rounded-full shadow-soft hover:opacity-90 transition"
           >
-            Commission
+            Enquire
           </a>
         </div>
       </header>
@@ -108,7 +108,7 @@ function Index() {
                 href="#contact"
                 className="px-7 py-3.5 rounded-full border border-ink/20 text-sm tracking-wide hover:bg-ink/5 transition"
               >
-                Request a Commission →
+                Request an Enquiry →
               </a>
             </motion.div>
           </div>
@@ -130,7 +130,7 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             ["62", "Years of craft"],
-            ["1,400+", "Commissions delivered"],
+            ["1,400+", "Projects delivered"],
             ["37", "Countries served"],
             ["48", "Master artisans"],
           ].map(([n, l]) => (
@@ -226,18 +226,30 @@ function Index() {
       <section id="contact" className="py-24 md:py-32 bg-card border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-gold mb-4">Commission</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-gold mb-4">Get in Touch</p>
             <h2 className="font-display text-4xl md:text-6xl leading-tight">
               Bring us your<br /> vision in stone.
             </h2>
             <p className="mt-6 text-muted-foreground max-w-md">
-              Every commission begins with a conversation. Share your intent, the space,
+              Every project begins with a conversation. Share your intent, the space,
               and the stone — we'll design, model, and quote within two weeks.
             </p>
-            <div className="mt-10 space-y-3 text-sm">
-              <div><span className="text-muted-foreground">Studio</span> — Kishangarh, Rajasthan 305801</div>
-              <div><span className="text-muted-foreground">Phone</span> — +91 98290 00000</div>
-              <div><span className="text-muted-foreground">Email</span> — atelier@rajasthanmarblearts.in</div>
+            <div className="mt-10 space-y-4 text-sm">
+              <div>
+                <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground mb-1">Founder & CEO</div>
+                <div className="font-display text-xl">Himanshu Mishra</div>
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground mb-1">Phone</div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  <a href="tel:+917727861541" className="hover:text-gold transition">+91 77278 61541</a>
+                  <a href="tel:+918209288752" className="hover:text-gold transition">+91 82092 88752</a>
+                </div>
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.24em] text-muted-foreground mb-1">Address</div>
+                <div>Alwar, Rajasthan, India</div>
+              </div>
             </div>
           </div>
 
@@ -251,7 +263,7 @@ function Index() {
             <input required placeholder="Your name" className="bg-background border border-border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-ring" />
             <input required type="email" placeholder="Email" className="bg-background border border-border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-ring" />
             <input placeholder="Project location" className="bg-background border border-border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-ring" />
-            <textarea required rows={5} placeholder="Describe your commission — piece, dimensions, stone, timeline." className="bg-background border border-border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
+            <textarea required rows={5} placeholder="Describe your project — piece, dimensions, stone, timeline." className="bg-background border border-border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
             <button className="mt-2 gold-gradient text-ink font-medium rounded-full py-4 tracking-wide hover:opacity-90 transition shadow-luxe">
               Send Enquiry
             </button>
