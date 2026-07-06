@@ -3,6 +3,8 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 
 const MarbleScene = lazy(() => import("@/components/MarbleScene"));
+const ARShowcase = lazy(() => import("@/components/ARShowcase"));
+const SupportChat = lazy(() => import("@/components/SupportChat"));
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -43,6 +45,7 @@ function Index() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#collection" className="hover:text-foreground transition">Collection</a>
             <a href="#craft" className="hover:text-foreground transition">Craft</a>
+            <a href="#try-in-your-space" className="hover:text-foreground transition">AR Preview</a>
             <a href="#heritage" className="hover:text-foreground transition">Heritage</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>

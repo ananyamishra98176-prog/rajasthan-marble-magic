@@ -47,9 +47,8 @@ const PIECES: Piece[] = [
   },
 ];
 
-declare global {
+declare module "react" {
   namespace JSX {
-    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     interface IntrinsicElements {
       "model-viewer": React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & Record<string, unknown>,
