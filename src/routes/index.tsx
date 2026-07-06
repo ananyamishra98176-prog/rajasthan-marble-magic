@@ -3,6 +3,8 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 
 const MarbleScene = lazy(() => import("@/components/MarbleScene"));
+const ARShowcase = lazy(() => import("@/components/ARShowcase"));
+const SupportChat = lazy(() => import("@/components/SupportChat"));
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -43,6 +45,7 @@ function Index() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#collection" className="hover:text-foreground transition">Collection</a>
             <a href="#craft" className="hover:text-foreground transition">Craft</a>
+            <a href="#try-in-your-space" className="hover:text-foreground transition">AR Preview</a>
             <a href="#heritage" className="hover:text-foreground transition">Heritage</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
@@ -208,6 +211,11 @@ function Index() {
         </div>
       </section>
 
+      {/* AR SHOWCASE */}
+      <Suspense fallback={<div className="h-[400px]" />}>
+        <ARShowcase />
+      </Suspense>
+
       {/* HERITAGE / QUOTE */}
       <section id="heritage" className="py-28 md:py-40 marble-surface relative">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -278,6 +286,10 @@ function Index() {
           <div className="font-display italic">Handcarved in Kishangarh.</div>
         </div>
       </footer>
+
+      <Suspense fallback={null}>
+        <SupportChat />
+      </Suspense>
     </main>
   );
 }
