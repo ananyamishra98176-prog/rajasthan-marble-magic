@@ -51,7 +51,7 @@ function Index() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-12 gap-6 lg:gap-10 items-end relative">
           <div className="col-span-12 lg:col-span-5 flex flex-col justify-end space-y-10 lg:pb-12 relative z-20">
             <motion.span initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="block text-gold uppercase tracking-[0.35em] text-[11px]">
-              Est. MCMXCVII · Alwar · Rajasthan
+              Est. MCMLXX · Alwar · Rajasthan
             </motion.span>
             <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.1 }} className="font-display text-6xl md:text-7xl lg:text-[7.5rem] leading-[0.88] font-light tracking-tight">
               The Soul<br />of <span className="italic text-gold">Makrana</span>.
@@ -219,7 +219,7 @@ function Index() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12 grid grid-cols-12 gap-10 items-center">
           <div className="col-span-12 md:col-span-5 relative">
             <div className="text-[color:var(--gold)]/10 font-display italic text-[220px] leading-none select-none absolute -top-16 -left-6 pointer-events-none">R</div>
-            <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6 relative">Heritage · Est. 1997</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6 relative">Heritage · Est. 1970</p>
             <h2 className="font-display text-5xl md:text-6xl leading-[0.95] font-light relative">
               A house built on <span className="italic text-gold">stone,</span><br /> and on <span className="italic">trust.</span>
             </h2>
