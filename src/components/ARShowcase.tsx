@@ -24,26 +24,45 @@ type Piece = {
   poster?: string;
 };
 
-// Public sample GLB / USDZ pairs from Google's model-viewer CDN so AR works out-of-the-box.
-// Replace src/ios with your own scanned marble pieces (.glb + .usdz) as they're produced.
+// ─────────────────────────────────────────────────────────────────────
+//  R.M.A AR CATALOGUE
+//  Drop your scanned pieces here. Each entry needs a `.glb` (Android /
+//  WebXR / desktop) and ideally a `.usdz` (iOS Quick Look).
+//
+//  Recommended hosting: upload the files to Lovable Assets or any CDN
+//  that serves them over HTTPS with CORS enabled, then paste the URLs
+//  into `src` and `ios` below. Keep GLB files under ~15 MB for smooth
+//  loading on mobile networks.
+//
+//  Until real files are provided, sample models from modelviewer.dev
+//  are used so the AR preview stays functional.
+// ─────────────────────────────────────────────────────────────────────
+const SAMPLE = "https://modelviewer.dev/shared-assets/models";
+
 const PIECES: Piece[] = [
   {
-    id: "chair",
-    name: "Carved Accent Chair",
-    stone: "Rosewood + Marble base",
-    src: "https://modelviewer.dev/shared-assets/models/Chair.glb",
-  },
-  {
-    id: "astronaut",
-    name: "Contemporary Figure",
+    id: "ganesha",
+    name: "Ganesha Idol",
     stone: "Makrana white",
-    src: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    // TODO: replace with your scanned Ganesha idol
+    src: `${SAMPLE}/Astronaut.glb`,
+    ios: undefined, // e.g. "https://cdn.rma.com/ar/ganesha.usdz"
   },
   {
-    id: "horse",
-    name: "Horse Sculpture",
+    id: "pillar",
+    name: "Carved Temple Pillar",
     stone: "Rajnagar green",
-    src: "https://modelviewer.dev/shared-assets/models/Horse.glb",
+    // TODO: replace with your scanned pillar
+    src: `${SAMPLE}/Horse.glb`,
+    ios: undefined,
+  },
+  {
+    id: "fountain",
+    name: "Pietra Dura Fountain",
+    stone: "Makrana white + inlay",
+    // TODO: replace with your scanned fountain
+    src: `${SAMPLE}/Chair.glb`,
+    ios: undefined,
   },
 ];
 
