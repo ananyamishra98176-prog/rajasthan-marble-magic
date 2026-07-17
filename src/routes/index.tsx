@@ -274,19 +274,32 @@ function Index() {
             className="lg:col-span-7 grid gap-5"
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Thank you — the atelier will respond within two working days.");
+              const f = e.currentTarget as HTMLFormElement;
+              const data = new FormData(f);
+              const name = String(data.get("name") || "").trim();
+              const email = String(data.get("email") || "").trim();
+              const location = String(data.get("location") || "").trim();
+              const message = String(data.get("message") || "").trim();
+              const subject = `Private Enquiry — ${name || "New Commission"}`;
+              const body =
+                `Name: ${name}\nEmail: ${email}\nLocation: ${location}\n\nCommission Brief:\n${message}\n\n— Sent from rajasthanmarblearts.com`;
+              window.location.href = `mailto:rajasthanmarblearts03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }}
           >
             <div className="grid md:grid-cols-2 gap-5">
-              <input required placeholder="Name" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
-              <input required type="email" placeholder="Email" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
+              <input name="name" required maxLength={100} placeholder="Name" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
+              <input name="email" required type="email" maxLength={255} placeholder="Email" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
             </div>
-            <input placeholder="Project location" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
-            <textarea required rows={5} placeholder="Describe the commission — piece, dimensions, stone, timeline." className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] resize-none placeholder:text-muted-foreground/60" />
+            <input name="location" maxLength={120} placeholder="Project location" className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] text-lg font-display placeholder:text-muted-foreground/60" />
+            <textarea name="message" required rows={5} maxLength={2000} placeholder="Describe the commission — piece, dimensions, stone, timeline." className="bg-transparent border-b border-[color:var(--gold)]/30 px-1 py-4 focus:outline-none focus:border-[color:var(--gold)] resize-none placeholder:text-muted-foreground/60" />
             <button className="mt-8 group relative w-fit px-10 py-4 border border-[color:var(--gold)] text-[10px] uppercase tracking-[0.35em] text-foreground hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)] transition-colors">
               Submit Private Enquiry
               <span className="absolute -inset-1 border border-[color:var(--gold)]/0 group-hover:border-[color:var(--gold)]/40 transition-all pointer-events-none" />
             </button>
+            <div className="mt-4 flex flex-wrap gap-6 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <a href="https://wa.me/917727861541" target="_blank" rel="noreferrer" className="hover:text-gold transition">WhatsApp →</a>
+              <a href="mailto:rajasthanmarblearts03@gmail.com" className="hover:text-gold transition">rajasthanmarblearts03@gmail.com</a>
+            </div>
           </form>
         </div>
       </section>
